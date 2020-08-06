@@ -1,3 +1,6 @@
 [submodule ".\\rn-first-app\\"]
 	path = .\\rn-first-app\\
 	url = https://github.com/rydawnshootingstar/rn-first-app.git
+[submodule ".\\rn-styling\\"]
+	path = .\\rn-styling\\
+	url = https://github.com/rydawnshootingstar/rn-styling.git

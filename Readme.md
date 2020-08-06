@@ -7,6 +7,3 @@ Will hold all of my beginner React Native projects.
 ## Project Management
 Is done through Expo - https://expo.io
 
-## Styling
-Is done through Styled-Components (no thanks to learning yet another CSS style syntax) - https://styled-components.com/
-

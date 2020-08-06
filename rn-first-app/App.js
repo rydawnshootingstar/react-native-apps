@@ -1,34 +1,37 @@
 import { StatusBar } from "expo-status-bar";
-import React, { useState } from "react";
+import React, { Component, useState } from "react";
 import { SafeAreaView, Text, Button } from "react-native";
 import styled from "styled-components";
 import { AntDesign } from "@expo/vector-icons";
 
-export default function App() {
-    return (
-        <Container>
-            <StatusBar barStyle='light-content' />
-            <PhoBackground source={require("./assets/pho.png")}>
-                <SafeAreaView>
-                    <MenuBar>
-                        <Back>
-                            <AntDesign
-                                name='arrowleft'
-                                size={30}
-                                color='#000'
-                            />
-                            <Text style={{ marginLeft: 10, color: "#000" }}>
-                                Back
-                            </Text>
-                        </Back>
-                    </MenuBar>
-                </SafeAreaView>
-            </PhoBackground>
-            <TitleText>Pho To Go</TitleText>
+import OrderButton from './components/OrderButton';
 
-			<OrderButton title="Order Now" ></OrderButton>
-        </Container>
-    );
+export default class App extends Component {
+    render() {
+        return (
+            <Container>
+                <StatusBar barStyle='light-content' />
+                <PhoBackground source={require("./assets/pho.png")}>
+                    <SafeAreaView>
+                        <MenuBar>
+                            <Back>
+                                <AntDesign
+                                    name='arrowleft'
+                                    size={30}
+                                    color='#000'
+                                />
+                                <Text style={{ marginLeft: 10, color: "#000" }}>
+                                    Back
+                                </Text>
+                            </Back>
+                        </MenuBar>
+                    </SafeAreaView>
+                </PhoBackground>
+                <TitleText>Pho To Go</TitleText>
+				<OrderButton />
+            </Container>
+        );
+    }
 }
 
 const Container = styled.View`
@@ -58,8 +61,16 @@ const Back = styled.View`
     align-items: center;
 `;
 
-const OrderButton = styled.Button`
-max-width: 30px;
-overflow: hidden;
-background-color: red;
-`
+const OrderText = styled.Text`
+    font-size: 22px;
+    color: #ffffff;
+    background-color: #f0f;
+    border-radius: 10px;
+    padding: 10px 10px;
+    width: 30%;
+    margin-left: 35%;
+    text-align: center;
+    &:hover {
+        color: #000;
+    }
+`;
